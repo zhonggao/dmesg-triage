@@ -1,0 +1,37 @@
+invoked oom-killer:
+INFO: possible recursive locking detected
+ is trying to acquire lock:
+ state was registered at:
+Possible unsafe locking scenario:
+       CPU0$
+       ----$
+  lock(.*);
+\*\*\* DEADLOCK \*\*\*
+May be due to missing lock nesting notation
+  <Interrupt>
+but task is already holding lock:
+which lock already depends on the new lock.
+other info that might help us debug this:
+stack backtrace:
+ EFLAGS: 
+RBP: 
+ knlGS:
+ CR3: 
+Stack:
+Code: 
+sending NMI to all CPUs:
+Modules linked in:
+Hardware name: 
+Call Trace:
+\[<[a-f0-9]\+>\] [a-z0-9._]\++0x[0-9a-f]\+/0x[0-9a-f]\+
+\[<[a-f0-9]\+>\] ? [a-z0-9._]\++0x[0-9a-f]\+/0x[0-9a-f]\+
+\( [0-9a-f]\{16\}\)\{7\}
+slab_unreclaimable:
+Swap cache stats:
+pages RAM
+ locks held by 
+ lock held by 
+RCU used illegally from 
+ =========================$
+Object [0-9a-f]\+: [0-9a-f ]\+  \.\.\.
+Redzone [0-9a-f]\+: [0-9a-f ]\+ 
